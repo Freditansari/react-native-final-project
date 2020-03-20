@@ -4,9 +4,10 @@ import HeadlinePanel from './HeadlinePanel'
 
 const HomeScreen = () => {
     return (
-        <View>
-            <Text>Hello from home screen</Text>
-            <HeadlinePanel />
+        <View style={{flex:1}}>
+            <Text>Headline -> Swipe to see more</Text>
+            <HeadlinePanel style={{flex:5}}/>
+
         </View>
     )
 }

@@ -1,8 +1,11 @@
 import React ,{useState, useEffect} from 'react'
-import { StyleSheet, Text, View, FlatList } from 'react-native';
+import { StyleSheet, Text, View, FlatList , Image } from 'react-native';
 import axios from 'axios';
 import { setProvidesAudioData } from 'expo/build/AR';
 import { ScrollView } from 'react-native-gesture-handler';
+// import {Card} from 'react-native-elements';
+import Card from '../Shared/Cards'
+
 
 const HeadlinePanel = () => {
     const [HeadlineNews, setHeadlineNews] = useState([]);
@@ -22,19 +25,31 @@ const HeadlinePanel = () => {
  
 
     return (
-        <View>
-           <ScrollView>
+        <View style={{height: 400}}>
+           
+           <ScrollView horizontal>
            {
-                 (HeadlineNews.articles)?(
-                        // <Text>{HeadlineNews.articles[3].title.toString()}</Text>
-                        
+                (HeadlineNews.articles)?(
 
-                        HeadlineNews.articles.map( article =>(
-                            <Text>{article.title}</Text>
-                        ))
-                    ):(
-                        <Text>Please wait while we render</Text>
-                    )
+                    HeadlineNews.articles.map( article =>(
+                        <View  key ={article.publishedAt}>
+                        
+                            {/* <Card  title={article.title.toString()} resizeMode="cover" image={{uri: article.urlToImage}} > */}
+                            <Card style={{height:250}} children={article.title.toString()} image={article.urlToImage} />
+                                
+                               
+                      
+                        </View>
+                    
+
+                    ))
+                
+                
+                ):(
+                    <Text>Please wait while we render</Text>
+                )
+
+
 
            }
            </ScrollView>

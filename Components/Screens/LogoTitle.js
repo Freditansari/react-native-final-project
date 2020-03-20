@@ -4,7 +4,7 @@ import { View, Image } from 'react-native'
 const LogoTitle = () => {
     return (
         <View>
-            <Image style={{width: 75, height: 50}} source={require('../../assets/merdeka.png')} />
+            <Image style={{width: 70, height: 35}} source={require('../../assets/merdeka.png')} />
         </View>
     )
 }
