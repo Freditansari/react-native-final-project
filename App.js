@@ -6,6 +6,11 @@ import { NavigationContainer, TabActions } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import HomeScreen from './Components/Screens/HomeScreen'
+import MarketScreen from './Components/Screens/MarketScreen';
+import CloudTVScreen from './Components/Screens/CloudTVScreen';
+
+import LogoTitle from './Components/Screens/LogoTitle';
+
 const tab = createBottomTabNavigator();
 const Stack =createStackNavigator();
 export default function App() {
@@ -16,7 +21,7 @@ export default function App() {
             {
               ()=>(
                 <Stack.Navigator>
-                  <Stack.Screen name="Home" component={HomeScreen}/>
+                  <Stack.Screen name="Home" options={{headerTitle: <LogoTitle />}} component={HomeScreen}/>
                 </Stack.Navigator>
               )
             }
@@ -26,7 +31,7 @@ export default function App() {
             {
               ()=>(
                 <Stack.Navigator>
-                  <Stack.Screen name="Home" component={HomeScreen}/>
+                  <Stack.Screen name="Market" component={MarketScreen}/>
                 </Stack.Navigator>
               )
             }
@@ -36,7 +41,7 @@ export default function App() {
             {
               ()=>(
                 <Stack.Navigator>
-                  <Stack.Screen name="Home" component={HomeScreen}/>
+                  <Stack.Screen name="Cloud" component={CloudTVScreen}/>
                 </Stack.Navigator>
               )
             }
