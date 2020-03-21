@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
     
   },
     card: {
-        height: imageHeight*1.2,
+        height: imageHeight*1.15,
         width: imageWidth*0.8,
         borderRadius: 6,
         elevation: 3,
@@ -49,13 +49,13 @@ const styles = StyleSheet.create({
     
       },
       cardContent: {
-     
+        marginLeft: 20,
         marginHorizontal: 18,
         marginVertical: 20,
        
       },
       cardText:{
-        width:"95%",
+        width:"99.99%",
         marginTop: 15,
         fontFamily:'HelveticaNeue-UltraLight',
         fontWeight:'normal'

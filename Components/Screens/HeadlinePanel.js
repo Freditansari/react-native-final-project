@@ -32,20 +32,18 @@ const HeadlinePanel = ({navigation}) => {
            {
                 (HeadlineNews.articles)?(
 
-                    HeadlineNews.articles.map( article =>(
+                    HeadlineNews.articles.map( article =>{
+                        let truncatedArticle = article.title.toString();
+                        truncatedArticle= truncatedArticle.substring(0,110)
+                        return (
                         <TouchableOpacity navigation = {navigation} onPress={() => navigation.navigate('News')}>
                         <View key ={article.publishedAt}>
-                        
-                            {/* <Card  title={article.title.toString()} resizeMode="cover" image={{uri: article.urlToImage}} > */}
-                            <Card children={article.title.toString()} image={article.urlToImage} />
-                                
-                               
-                      
+                            <Card children={truncatedArticle} image={article.urlToImage} />
                         </View>
                         </TouchableOpacity>
                     
 
-                    ))
+                    )})
                 
                 
                 ):(
