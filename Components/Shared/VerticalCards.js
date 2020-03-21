@@ -51,8 +51,7 @@ const styles = StyleSheet.create({
       cardContent: {
         flex:1,
         flexDirection:"row",
-
-       
+        flexWrap:'wrap'
       },
       cardText:{
         fontFamily:'HelveticaNeue-UltraLight',
@@ -62,10 +61,10 @@ const styles = StyleSheet.create({
         flex: 3,
         marginHorizontal: 10,
         marginVertical: 15,
+       
       },
       rightColumn:{
         flex:1,
-        
       },
       image:{
         marginTop: 7,

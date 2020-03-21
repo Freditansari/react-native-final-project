@@ -1,15 +1,19 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
 import CategoryPanel from './CategoryPanel'
 import NewsListsPanel from './NewsListsPanel'
 
 const CategoryScreen = () => {
-    const [SelectedCategory, setSelectedCategory] = useState('Finance')
+    let [SelectedCategory, setSelectedCategory] = useState("Finance")
+
+    useEffect(() =>{
+    },[SelectedCategory])
+
     return (
         <View>
-             <CategoryPanel />
-             <NewsListsPanel />
+             <CategoryPanel setSelectedCategory ={setSelectedCategory}/>
+             <NewsListsPanel SelectedCategory={SelectedCategory}/>
         </View>
     )
 }
