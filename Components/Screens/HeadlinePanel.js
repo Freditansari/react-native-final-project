@@ -36,11 +36,13 @@ const HeadlinePanel = ({navigation}) => {
                         let truncatedArticle = article.title.toString();
                         truncatedArticle= truncatedArticle.substring(0,110)
                         return (
-                        <TouchableOpacity navigation = {navigation} onPress={() => navigation.navigate('News')}>
-                        <View key ={article.publishedAt}>
-                            <Card children={truncatedArticle} image={article.urlToImage} />
-                        </View>
-                        </TouchableOpacity>
+                            <View key ={article.publishedAt}>
+                                <TouchableOpacity navigation = {navigation} onPress={() => navigation.navigate('News')}>
+                            
+                                    <Card children={truncatedArticle} image={article.urlToImage} />
+                                
+                                </TouchableOpacity>
+                            </View>
                     
 
                     )})
