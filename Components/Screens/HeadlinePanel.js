@@ -2,12 +2,13 @@ import React ,{useState, useEffect} from 'react'
 import { StyleSheet, Text, View, FlatList , Image } from 'react-native';
 import axios from 'axios';
 import { setProvidesAudioData } from 'expo/build/AR';
-import { ScrollView } from 'react-native-gesture-handler';
+import { ScrollView, TouchableOpacity } from 'react-native-gesture-handler';
 // import {Card} from 'react-native-elements';
 import Card from '../Shared/Cards'
 
 
-const HeadlinePanel = () => {
+const HeadlinePanel = ({navigation}) => {
+ 
     const [HeadlineNews, setHeadlineNews] = useState([]);
     const fetchData =async() =>{
         const result = await axios
@@ -25,21 +26,23 @@ const HeadlinePanel = () => {
  
 
     return (
-        <View style={{height: 400}}>
+        <View >
            
            <ScrollView horizontal>
            {
                 (HeadlineNews.articles)?(
 
                     HeadlineNews.articles.map( article =>(
-                        <View  key ={article.publishedAt}>
+                        <TouchableOpacity navigation = {navigation} onPress={() => navigation.navigate('News')}>
+                        <View key ={article.publishedAt}>
                         
                             {/* <Card  title={article.title.toString()} resizeMode="cover" image={{uri: article.urlToImage}} > */}
-                            <Card style={{height:250}} children={article.title.toString()} image={article.urlToImage} />
+                            <Card children={article.title.toString()} image={article.urlToImage} />
                                 
                                
                       
                         </View>
+                        </TouchableOpacity>
                     
 
                     ))

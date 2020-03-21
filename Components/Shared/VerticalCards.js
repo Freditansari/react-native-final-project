@@ -1,62 +1,51 @@
 import React from 'react'
-import { StyleSheet, Text, View, Image , Dimensions } from 'react-native'
-import { AuthSession } from 'expo'
+import { StyleSheet, Text, View, Image } from 'react-native'
 
-let dimensions = Dimensions.get("window");
-let imageHeight = Math.round((dimensions.width * 9) / 16);
-let imageWidth = dimensions.width;
+
 const Cards = (props) => {
-
-
-
     return (
-      <View styles={styles.cardContainer}>
         <View style={styles.card} >
-          
+           <Image
+          style={{width: '25%', height: 50 , marginTop: 7, marginLeft: 8}}
+          source={{uri: 'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg'}} />
           
             <View style={styles.cardContent}>
-              <Image
-                    style={{width: imageWidth*.7, height: imageHeight*.7}}
-                    source={{uri: props.image}} />
                 <Text style={styles.cardText}>
-                     { props.children }
+                     {/* { props.children } */}
+                      lorem ipsum
                 </Text>
            
             </View>
          </View>
-      </View>
     )
 }
 
 export default Cards
 
 const styles = StyleSheet.create({
-  cardContainer:{
-    
-  },
     card: {
-        height: imageHeight*1.2,
-        width: imageWidth*0.8,
+        height: 70,
+      
+        flexDirection:'row',
         borderRadius: 6,
-        elevation: 3,
+        elevation: 10,
         backgroundColor: '#fff',
         shadowOffset: { width: 1, height: 1 },
         shadowColor: '#333',
-        shadowOpacity: 0.3,
+        shadowOpacity: 0.5,
         shadowRadius: 2,
         marginHorizontal: 4,
         marginVertical: 6,
     
       },
       cardContent: {
-     
+        // flex:1
+        width:'80%',
         marginHorizontal: 18,
         marginVertical: 20,
        
       },
       cardText:{
-        width:"95%",
-        marginTop: 15,
         fontFamily:'HelveticaNeue-UltraLight',
         fontWeight:'normal'
       }
