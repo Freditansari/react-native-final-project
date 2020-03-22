@@ -5,9 +5,9 @@ import { TouchableOpacity } from 'react-native-gesture-handler'
 const NewsDetails = ({navigation}) => {
     return (
         <View>
-            <TouchableOpacity onPress={() => navigation.navigate('cloudTV')}>
-                <Text>hello from news details</Text>
-            </TouchableOpacity>
+            
+                <Text>hello from news details potato</Text>
+    
             
         </View>
     )

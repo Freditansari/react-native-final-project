@@ -16,6 +16,7 @@ const tab = createBottomTabNavigator();
 const Stack =createStackNavigator();
 export default function App() {
   return (
+    <View>
     <NavigationContainer>
       <tab.Navigator>
           <tab.Screen name="News">
@@ -52,6 +53,7 @@ export default function App() {
           </tab.Screen>
       </tab.Navigator>
     </NavigationContainer>
+    </View>
   );
 }
 

@@ -30,9 +30,7 @@ const CategoryPanel = (props) => {
              
             
             </ScrollView>
-            {/* <View>
-                    <NewsListsPanel />
-            </View> */}
+           
            
         </View>
     )

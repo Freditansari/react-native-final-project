@@ -10,17 +10,26 @@ const Cards = (props) => {
               <View style={styles.cardContent}>
                 <View style ={ styles.leftColumn}>
                   <Text style={styles.cardText}>
-                        {/* { props.children } */}
-                          lorem ipsum
+                       
+                          {props.title}
                     </Text>
 
                 </View>
                 <View style={styles.rightColumn}>
-                  <Image
-                    style={styles.image}
-                    source={{uri: 'https://wallpaper.wiki/wp-content/uploads/2017/04/wallpaper.wiki-Images-HD-Diamond-Pattern-PIC-WPB009691.jpg'}} />
+                  {
+                    (props.imageUrl)?(
+                        <Image
+                        style={styles.image}
+                        source={{uri: props.imageUrl}} />
+                    ):(
+                      <Image
+                      style={styles.image}
+                      source={{uri: 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg'}} />
+                    )
+                  }
+                 
                     
-                     {/* <Text>lorem ipsum 2</Text> */}
+                     
                 </View>
                 
           
