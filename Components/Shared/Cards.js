@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
       cardText:{
         width:"99.99%",
         marginTop: 15,
-        fontFamily:'HelveticaNeue-UltraLight',
+        // fontFamily:'HelveticaNeue-UltraLight',
         fontWeight:'normal'
       }
 

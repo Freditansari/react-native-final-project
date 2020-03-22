@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         flexWrap:'wrap'
       },
       cardText:{
-        fontFamily:'HelveticaNeue-UltraLight',
+        // fontFamily:'HelveticaNeue-UltraLight',
         fontWeight:'normal'
       },
       leftColumn:{

@@ -16,14 +16,14 @@ const tab = createBottomTabNavigator();
 const Stack =createStackNavigator();
 export default function App() {
   return (
-    <View>
+
     <NavigationContainer>
       <tab.Navigator>
           <tab.Screen name="News">
             {
               ()=>(
                 <Stack.Navigator>
-                  <Stack.Screen name="Home" options={{headerTitle: <LogoTitle />,headerStyle:{ backgroundColor:'#fff'}}} component={HomeScreen}/>
+                  <Stack.Screen name="Home" options={{headerTitle: "Home",headerStyle:{ backgroundColor:'#fff'}}} component={HomeScreen}/>
                   <Stack.Screen name="News" options={{headerTitle: 'News'}} component={NewsDetails}/>
                   <Stack.Screen name="cloudTV" options={{headerTitle: 'TV'}} component={CloudTVScreen}/>
                 </Stack.Navigator>
@@ -35,7 +35,7 @@ export default function App() {
             {
               ()=>(
                 <Stack.Navigator>
-                  <Stack.Screen name="Market" options={{headerTitle: <LogoTitle />,headerStyle:{ backgroundColor:'#FF002A'}}} component={MarketScreen}/>
+                  <Stack.Screen name="Market" options={{headerTitle: "Market",headerStyle:{ backgroundColor:'#fff'}}} component={MarketScreen}/>
                 </Stack.Navigator>
               )
             }
@@ -45,7 +45,7 @@ export default function App() {
             {
               ()=>(
                 <Stack.Navigator>
-                  <Stack.Screen name="Cloud"options={{headerTitle: <LogoTitle />,headerStyle:{ backgroundColor:'#FF002A'}}} component={CloudTVScreen}/>
+                  <Stack.Screen name="Cloud"options={{headerTitle: "Cloud TV",headerStyle:{ backgroundColor:'#fff'}}} component={CloudTVScreen}/>
                 </Stack.Navigator>
               )
             }
@@ -53,7 +53,7 @@ export default function App() {
           </tab.Screen>
       </tab.Navigator>
     </NavigationContainer>
-    </View>
+ 
   );
 }
 
