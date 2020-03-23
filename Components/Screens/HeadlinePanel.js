@@ -34,7 +34,7 @@ const HeadlinePanel = ({navigation}) => {
                         truncatedArticle= truncatedArticle.substring(0,110)
                         return (
                             <View key ={article.publishedAt}>
-                                <TouchableOpacity navigation = {navigation} onPress={() => navigation.navigate('News',article)}>
+                                <TouchableOpacity onPress={() => navigation.navigate('News',article)}>
                             
                                     <Card children={truncatedArticle} image={article.urlToImage} />
                                 

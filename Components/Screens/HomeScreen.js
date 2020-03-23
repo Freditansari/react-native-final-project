@@ -11,7 +11,7 @@ const HomeScreen = ({navigation}) => {
             <ScrollView >
                 <Text>Headline -> Swipe to see more</Text>
                 <HeadlinePanel navigation={navigation}/>
-                <CategoryScreen />
+                <CategoryScreen navigation={navigation} />
             </ScrollView>
            
         </View>
